@@ -1,0 +1,50 @@
+# identitah
+set realname=""
+set from=""
+set signature='~/.mutt/accounts/signature.sig'
+set imap_user="$from"
+set imap_pass=
+set pgp_sign_as=
+set pgp_autosign=no
+set pgp_replyencrypt=yes
+set pgp_replysign=yes  
+
+# imap
+set folder      = "imaps://imap.gmail.com:993"
+set spoolfile   = "+INBOX"
+set postponed   = "+[Gmail]/Drafts"
+set trash       = "+[Google Mail]/Bin"
+set mbox        = +INBOX
+set record 		= +Sent
+set copy        = no
+unset record
+save-hook       .* "=[Google Mail]/Bin"
+
+# smtp
+set smtp_url = "smtp://email@smtp.gmail.com:587/"
+set smtp_pass = ""
+
+# sec. related
+set move = no
+set imap_keepalive = 900
+set mail_check = 120
+
+set nouse_domain
+
+# search imap (prefix =b)
+set simple_search="=b %s"
+
+# viewing html
+set mailcap_path 	= ~/.mutt/mailcap
+
+# html
+alternative_order text/plain text/html
+auto_view text/html
+
+# mutt & nano
+set editor="nano +7"
+
+# query via google contacts
+set query_command="goobook query '%s'"
+bind editor <Tab> complete-query
+macro index,pager a "<pipe-message>goobook add<return>" "add the sender address to Google contacts"

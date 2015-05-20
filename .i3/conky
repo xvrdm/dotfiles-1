@@ -1,0 +1,43 @@
+background        no
+out_to_console 	  yes
+out_to_x	  no
+update_interval	  2
+total_run_times	  0
+short_units	  yes
+pad_percents	  3
+max_text_width 0
+if_up_strictness address
+override_utf8_locale no
+
+use_xft yes
+xftfont terminus:size=12
+
+TEXT
+[
+  {"full_text": ${if_mpd_playing} "","color":"\#5d5d5d"},
+  {"full_text": "[${mpd_status}] ${mpd_artist 20} - ${mpd_title 30} ","color":"\#a6a6a6"},
+  $else""},$endif
+
+  {"full_text": "", "color" : "\#5d5d5d"},
+  {"full_text": "${execpi 60 python ~/bin/gmail.py} ","color":"\#a6a6a6"},  
+  
+  {"full_text": "", "color" : "\#5d5d5d"},
+  ${if_up wlp3s0}{"full_text": "${wireless_essid wlp3s0} [${wireless_link_qual_perc wlp3s0}%] ","color":"\#a6a6a6"},
+  $else${if_up ppp0}{"full_text": "orange","color":"\#a6a6a6"},
+  $else${if_up enp4s0}{"full_text": "enp4s0","color":"\#a6a6a6"},
+  $else{"full_text": "no connection","color":"\#9C9C9C"},$endif$endif$endif
+  
+  {"full_text": "", "color" : "\#5d5d5d"},
+  {"full_text": "${execi 6 dropbox-cli status | sed -n 1p} ", "color":"\#a6a6a6"},
+  
+  {"full_text": "", "color" : "\#5d5d5d"},
+  {"full_text": "[$battery_percent%] ","color":"\#a6a6a6"},
+  
+  {"full_text": "", "color" : "\#5d5d5d"},
+  {"full_text": "${execpi 60 pactl list sinks | grep "Volume: front-left" | cut -d " " -f6 } ", "color":"\#a6a6a6"},
+
+  {"full_text": "", "color" : "\#5d5d5d"},
+  {"full_text": "${time %H:%M}","color":"\#a6a6a6"}
+],
+
+

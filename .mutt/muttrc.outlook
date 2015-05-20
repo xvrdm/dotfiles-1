@@ -1,0 +1,7 @@
+source ~/.mutt/accounts/outlook
+source ~/.mutt/sidebar
+source ~/.mutt/defaults
+source ~/.mutt/colors/vombatidae
+#source ~/.mutt/colors/solarized-dark-256
+source ~/.mutt/sorting
+source ~/.mutt/macros
