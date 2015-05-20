@@ -7,4 +7,4 @@
 
 ## Screenshot
 
-	<img src=http://i.imgur.com/rMkpan1.png>
+	![screenshot](https://github.com/okubax/dotfiles/blob/master/screenshot.png)
