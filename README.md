@@ -7,4 +7,5 @@
 
 ## Screenshot
 
-	![screenshot](https://github.com/okubax/dotfiles/blob/master/screenshot.png)
+	![screenshot.png](screenshot.png)
+
