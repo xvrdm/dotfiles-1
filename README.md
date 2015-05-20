@@ -7,5 +7,4 @@
 
 ## Screenshot
 
-	![screenshot.png](screenshot.png)
-
+	![dotfiles/screenshot.png](dotfiles/screenshot.png)
