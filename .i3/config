@@ -77,15 +77,26 @@ bindsym $mod+a focus parent
 bindsym $mod+d focus child
 
 # assign workspace variables
-set $WS1 term
-set $WS2 www
-set $WS3 text
-set $WS4 media
-set $WS5 misc
-set $WS6 system
-set $WS7 office
-set $WS8 mail
-set $WS9 games
+#set $WS1 term
+#set $WS2 www
+#set $WS3 text
+#set $WS4 media
+#set $WS5 misc
+#set $WS6 system
+#set $WS7 office
+#set $WS8 mail
+#set $WS9 games
+
+set $WS1 I
+set $WS2 II
+set $WS3 III
+set $WS4 IV
+set $WS5 V
+set $WS6 VI
+set $WS7 VII
+set $WS8 VIII
+set $WS9 IX
+set $WS10 X 
 
 # switch to workspace
 bindsym $mod+1 workspace $WS1
@@ -97,7 +108,7 @@ bindsym $mod+6 workspace $WS6
 bindsym $mod+7 workspace $WS7
 bindsym $mod+8 workspace $WS8
 bindsym $mod+9 workspace $WS9
-bindsym $mod+0 workspace 10
+bindsym $mod+0 workspace $WS10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $WS1
