@@ -36,7 +36,7 @@ TEXT
   {"full_text": "", "color" : "\#5d5d5d"},
   {"full_text": "${execpi 60 pactl list sinks | grep "Volume: front-left" | cut -d " " -f6 } ", "color":"\#a6a6a6"},
 
-  {"full_text": "", "color" : "\#5d5d5d"},
+  {"full_text": "", "color" : "\#5d5d5d"},
   {"full_text": "${time %H:%M}","color":"\#a6a6a6"}
 ],
 
