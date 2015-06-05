@@ -148,10 +148,6 @@ alias clipb="anamnesis -b"
 #xclip
 alias clipboard='xclip -o'
 
-# truecrypt
-alias tm="truecrypt -t /home/ajibola/.cr /home/ajibola/downloads/tc"
-alias tu="truecrypt -t -d"
-
 # disk space
 alias diskfree="df -ht ext4"
 
@@ -163,6 +159,10 @@ alias pcinfo="inxi -v6 -c4"
 
 # wireless network connection info
 alias wifo="sudo iftop -i wlp3s0"
+alias wifo2="slurm -i wlp3s0"
+
+# monitor connections
+alias netmon = "netstat -nputwc"
 
 # Look for high priority errors in the systemd journal
 alias errors="sudo journalctl -p 0..3 -xn"
