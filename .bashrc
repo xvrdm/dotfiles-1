@@ -102,7 +102,6 @@ alias gmail="mutt -F ~/.mutt/muttrc.gmail"
 alias outlook="mutt -F ~/.mutt/muttrc.outlook"
 alias yahoo="mutt -F ~/.mutt/muttrc.yahoo"
 
-
 ## BATTERY INFO
 alias bat="upower --show-info /org/freedesktop/UPower/devices/battery_BAT0"
 alias batr="upower --show-info /org/freedesktop/UPower/devices/battery_BAT0 | grep "time""
@@ -124,7 +123,8 @@ alias playvcd="mplayer vcd://2"
 alias takepic="mplayer tv:// -tv driver=v4l2:width=640:height=480:device=/dev/video0 -fps 15 -vf screenshot"
 
 # Webcam video capture
-alias webcam="mencoder tv:// -tv driver=v4l2:width=800:height=600:device=/dev/video0:fps=30:outfmt=yuy2:forceaudio:alsa:adevice=hw.0,0 -ovc lavc -lavcopts vcodec=mpeg4:vbitrate=1800 -ffourcc xvid -oac mp3lame -lameopts cbr=128 -o output.avi"
+#alias webcam="mencoder tv:// -tv driver=v4l2:width=800:height=600:device=/dev/video0:fps=30:outfmt=yuy2:forceaudio:alsa:adevice=hw.0,0 -ovc lavc -lavcopts vcodec=mpeg4:vbitrate=1800 -ffourcc xvid -oac mp3lame -lameopts cbr=128 -o output.avi"
+alias webcam="ffmpeg -f alsa -i default -f v4l2 -s 640x480 -i /dev/video0 -acodec flac -vcodec libx264 output.mkv"
 
 # BBC Radio
 #bbcradio() { local s PS3="Select a station: ";select s in 1 1x 2 3 4 4x 5l 5lsp 6 "Asian Network an" "Nations & Local lcl";do break;done;s=($s);play -playlist "http://www.bbc.co.uk/radio/listen/live/r"${s[@]: -1}".asx";}
@@ -155,14 +155,14 @@ alias diskfree="df -ht ext4"
 alias dusage="ncdu"
 
 # pcinfo
-alias pcinfo="inxi -v6 -c4"
+alias pcinfo="inxi -v6 -c2"
 
 # wireless network connection info
 alias wifo="sudo iftop -i wlp3s0"
 alias wifo2="slurm -i wlp3s0"
 
 # monitor connections
-alias netmon = "netstat -nputwc"
+alias netmon="netstat -nputwc"
 
 # Look for high priority errors in the systemd journal
 alias errors="sudo journalctl -p 0..3 -xn"
@@ -175,6 +175,13 @@ alias stopm="sudo systemctl stop mysqld"
 
 # Disk activity
 alias diskact="sudo iotop -Po"
+
+# ccache
+export USE_CCACHE=1
+
+#cups
+alias startprint="systemctl start org.cups.cupsd.service"
+alias stopprint="systemctl stop org.cups.cupsd.service"
 
 #archey
 #screenfetch

@@ -10,11 +10,11 @@ if_up_strictness address
 override_utf8_locale no
 
 use_xft yes
-xftfont terminus:size=12
+
 
 TEXT
 [
-  {"full_text": ${if_mpd_playing} "","color":"\#5d5d5d"},
+  {"full_text": ${if_mpd_playing} "","color":"\#5d5d5d"},
   {"full_text": "[${mpd_status}] ${mpd_artist 20} - ${mpd_title 30} ","color":"\#a6a6a6"},
   $else""},$endif
 
@@ -30,10 +30,10 @@ TEXT
   {"full_text": "", "color" : "\#5d5d5d"},
   {"full_text": "${execi 6 dropbox-cli status | sed -n 1p} ", "color":"\#a6a6a6"},
   
-  {"full_text": "", "color" : "\#5d5d5d"},
+  {"full_text": "", "color" : "\#5d5d5d"},
   {"full_text": "[$battery_percent%] ","color":"\#a6a6a6"},
   
-  {"full_text": "", "color" : "\#5d5d5d"},
+  {"full_text": "", "color" : "\#5d5d5d"},
   {"full_text": "${execpi 60 pactl list sinks | grep "Volume: front-left" | cut -d " " -f6 } ", "color":"\#a6a6a6"},
 
   {"full_text": "", "color" : "\#5d5d5d"},
