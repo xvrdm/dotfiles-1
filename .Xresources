@@ -2,15 +2,18 @@
 !URxvt.background: #101010
 !URxvt.foreground: #999993
 !URxvt.cursorColor: #395573
-URxvt.cursorColor: #676767
+!URxvt.cursorColor: #676767
 !URxvt.borderColor: #101010
 !URxvt.colorUL: #31658C
 URxvt.borderless: false
 URxvt.internalBorder: 3
 URxvt.externalBorder: 3
 URxvt.scrollBar: false
-URxvt.font: xft:terminus:pixelsize=11:antialias=false
-URxvt.boldFont: xft:terminus:bold:pixelsize=11:antialias=false
+!URxvt.font: xft:terminus:pixelsize=11:antialias=false
+!URxvt.boldFont: xft:terminus:bold:pixelsize=11:antialias=false
+
+URxvt.font: xft:Tewi:pixelsize=12:antialias=true
+URxvt.boldFont: xft:Tewi:pixelsize=12:antialias=true
 
 ! transparency
 !URxvt.transparent: true
@@ -35,10 +38,10 @@ URxvt.tabbed.title: true
 
 
 ! colours
-#include "/home/ajibola/.colors/rb15"
+!#include "/home/ajibola/.colors/gaseg"
+!#include "/home/ajibola/.colors/rb15"
 !#include "/home/ajibola/.colors/jsch"
-!#include "/home/ajibola/.colors/taser"
-!#include "/home/ajibola/.colors/s3r0"
+#include "/home/ajibola/.colors/s3r0"
 !#include "/home/ajibola/.colors/coral"
  
 ! fonts
