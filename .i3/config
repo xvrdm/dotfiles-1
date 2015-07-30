@@ -204,7 +204,8 @@ bindsym XF86MonBrightnessDown exec "xbacklight -10"
 
 bar {
     position bottom
-    font pango:Terminus, FontAwesome 8
+#    font pango:Terminus, FontAwesome 8
+    font xft:Tewi, FontAwesome 9
     status_command ~/.i3/conky.sh
     tray_output none 
     output LVDS1
