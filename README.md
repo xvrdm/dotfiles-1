@@ -11,5 +11,3 @@ wallpaper is made in GIMP using a pattern from <a href="http://www.squidfingers.
 ## Screenshot
 
 ![ScreenShot](/screenshot.png)
-
-![ScreenShot](/screenshot2.png)

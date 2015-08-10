@@ -9,11 +9,11 @@ URxvt.borderless: false
 URxvt.internalBorder: 3
 URxvt.externalBorder: 3
 URxvt.scrollBar: false
-!URxvt.font: xft:terminus:pixelsize=11:antialias=false
-!URxvt.boldFont: xft:terminus:bold:pixelsize=11:antialias=false
+URxvt.font: xft:terminus:pixelsize=11:antialias=false
+URxvt.boldFont: xft:terminus:bold:pixelsize=11:antialias=false
 
-URxvt.font: xft:Tewi:pixelsize=12:antialias=true
-URxvt.boldFont: xft:Tewi:pixelsize=12:antialias=true
+#URxvt.font: xft:Tewi:pixelsize=12:antialias=true
+#URxvt.boldFont: xft:Tewi:pixelsize=12:antialias=true
 
 ! transparency
 !URxvt.transparent: true
@@ -41,7 +41,8 @@ URxvt.tabbed.title: true
 !#include "/home/ajibola/.colors/gaseg"
 !#include "/home/ajibola/.colors/rb15"
 !#include "/home/ajibola/.colors/jsch"
-#include "/home/ajibola/.colors/s3r0"
+!#include "/home/ajibola/.colors/s3r0"
+#include "/home/ajibola/.colors/hund"
 !#include "/home/ajibola/.colors/coral"
  
 ! fonts
